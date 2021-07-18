@@ -27,7 +27,7 @@ spec:
         command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
       containers:
       - name: ngnix
-        image: bartolamey/web_app_for_k8s:0.11
+        image: json1/web-app:0.12
         readinessProbe:
           httpGet:
             path: /index.html

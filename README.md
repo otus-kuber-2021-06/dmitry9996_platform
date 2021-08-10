@@ -1,34 +1,34 @@
-# dmitry9996_platform
-dmitry9996 Platform repository
+Выполнено ДЗ №3
 
-Выполнено ДЗ №2
+task01:
 
-Пункт 1:
+- Создан sa bob с CluterRole admin
 
-- Уcтановлен kubectl;
+- Создан sa dave без (cluster)rolebinding
 
-- Установлен minikube;
+task02:
 
-- создан Dockerfile, в котором будет описан образ web сервера на nginx;
+- Создан namespace prometheus
 
-- создана дериктория kubernetes-intro/web;
+- Создан sa carol
 
-- собран докер образ и размешен в Container Registry Docker Hub 
+- Создана кластерная роль sa-role с правами выполнять get, list, watch над ресурсом pod
 
-https://hub.docker.com/layers/json1/web-app/0.12/images/sha256-416260247bf4f29aa89070bd5c3fdd9a7dee9c9a37f9de19df07ea1bffe90253?context=explore;
+- Создан ClusterRoleBinding, назначающий кластерную роль sa-role группе сервисных аккаунтов в namespace prometheus
 
-- Написан манифест web-pod.yaml;
+task03:
 
-Пункт 2
+- Создан namespace dev
 
-Как запустить проект:
+- Создан sa jane
 
-- Поместить манифест web-pod.yaml в k8s;
+- Создан ClusterRoleBinding, назначающий кластерную роль admin sa jane
 
-- Создать pod коммандой kubectl apply -f web-pod.yaml;
+- Создан sa ken
 
-Как проверить работоспособность:
+- Создан ClusterRoleBinding, назначающий кластерную роль view sa ken
 
+<<<<<<< HEAD
 - Открыть порт для pod коммандой: kubectl port-forward --address 0.0.0.0 pod/web 8000:8000Перейти по ссылке http://localhost:8080
 
 
@@ -114,3 +114,7 @@ PR checklist: Выставлен label с темой домашнего зада
 - В отдельной консоли запустить наш контроллер: `kopf run mysql-operator.py`
 - В другом окне консоли применить манифест cr: `kubectl apply -f deploy/cr.yml`
 
+=======
+ PR checklist:
+      Выставлен label с темой домашнего задания
+>>>>>>> 8fe819c6762b09aceaa330c6df5102534550d97a
